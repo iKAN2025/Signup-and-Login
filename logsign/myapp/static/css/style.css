@@ -1,0 +1,33 @@
+.form1{
+    background-color: lightgray;
+    padding: 20px;
+}
+
+.input1{
+  width: 300px;
+  height: 40px;
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid gray;
+}
+
+.confirm-button {
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+.button1 {
+position: relative;
+top: -10px;
+left: 500px;
+background-color: green;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}

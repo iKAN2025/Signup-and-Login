@@ -1,0 +1,29 @@
+{% load static %}
+
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+    <script type="text/javascript" src="{% static 'js/valid.js' %}"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>signup</title>
+</head>
+<body><h1>Create User</h1>
+    <a href="/users_list" class="button1" >Users List</a>
+    <a href="/" class="button1">Log In</a>
+
+<form method ="POST" class="form1" >
+
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="username" class="input1" required=""><br><br>
+    <input type="text" name="first_name" placeholder="First Name" class="input1" required=""><br><br>
+    <input type="text" name="last_name" placeholder="Last Name" class="input1" required=""><br><br>
+    <input type="email" name="email" id="email" placeholder="email" class="input1" required=""><br><br>
+    <input type="password" name="password" id="password" placeholder="password" class="input1" required=""><br><br>
+    <input type="submit" value="submit" class="confirm-button" onclick="validate()">
+
+
+</form>
+
+</body>
+</html>

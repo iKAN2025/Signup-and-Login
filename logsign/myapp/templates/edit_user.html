@@ -1,0 +1,43 @@
+<html>
+<style>
+  form {
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #dddddd;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
+<form action="{% url 'edit_user' user.id %}" method="post">
+  {% csrf_token %}
+  <input type="text" placeholder="username" name="username" value="{{ user.username }}">
+  <input type="email" placeholder="email" name="email" value="{{ user.email }}">
+  <input type="text" placeholder="First Name" name="first_name" value="{{ user.first_name }}">
+  <input type="text" placeholder="Last Name" name="last_name" value="{{ user.last_name }}">
+  <input type="submit" value="Save">
+</form>
+</html>
