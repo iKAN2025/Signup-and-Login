@@ -19,9 +19,11 @@ from myapp import views
 from django.http import HttpResponse
 
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('signup',views.signupview,name='signup'),
+    path('dashboard/', views.dashboard, name='dashboard'),
     path('',views.Login,name='login'),
     path('users_list',views.users_list,name='users_list'),
     path('edit_user/<int:id>/', views.edit_user, name='edit_user'),

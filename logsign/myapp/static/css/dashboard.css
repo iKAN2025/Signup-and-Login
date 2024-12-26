@@ -1,0 +1,53 @@
+/* General Body Styling */
+body {
+    background-color: #0f2027;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+    border-bottom: 2px solid #17a74d;
+}
+
+/* Card Styling */
+.card {
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #1c1f22;
+}
+
+.card-body {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+}
+
+/* Button Styling */
+.btn-success {
+    background: linear-gradient(135deg, #1db954, #17a74d);
+    border: none;
+    font-weight: bold;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+    background: linear-gradient(135deg, #17a74d, #1db954);
+    box-shadow: 0 5px 15px rgba(29, 185, 84, 0.8);
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #1c1f22;
+}
+
+/* Responsive Layout for Cards */
+@media (max-width: 768px) {
+    .col-md-4 {
+        margin-bottom: 20px;
+    }
+}

@@ -35,6 +35,9 @@ def signupview(request):
 
     return render(request,'signup.html')
 
+def dashboard(request):
+    # This is where you would gather any user data you need
+    return render(request, 'dashboard.html')
 
 def Login(request):
     if request.method == "POST":
@@ -45,9 +48,10 @@ def Login(request):
 
         if user is not None:
             login(request,user)
-            return HttpResponse("Successful Login")
+            return render(request,'dashboard.html')
         else:
             return redirect('signup')
     return render(request,'login.html')
+
 
 
