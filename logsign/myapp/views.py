@@ -36,9 +36,8 @@ def signupview(request):
     return render(request,'signup.html')
 
 def dashboard(request):
-    # This is where you would gather any user data you need
-    return render(request, 'dashboard.html')
-
+    user = request.user
+    return render(request, 'dashboard.html', {'user': user})
 def Login(request):
     if request.method == "POST":
         username = request.POST['username']
